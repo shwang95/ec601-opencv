@@ -11,14 +11,14 @@ img = cv2.imread(img_name, cv2.IMREAD_COLOR)
 
 gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
-cv2.imshow('Input Image', img)
+cv2.imshow('Original', img)
 
 threshold_type = 2
 threshold_value = 128
 
 ret, dst = cv2.threshold(gray, threshold_value, 255, threshold_type)
 
-cv2.imshow('Thresholded image', dst)
+cv2.imshow('Thresholded Image', dst)
 
 current_threshold = 128
 max_threshold = 255
@@ -27,7 +27,7 @@ max_threshold = 255
 ret, thresholded = cv2.threshold(
     gray, current_threshold, max_threshold, cv2.THRESH_BINARY)
 
-cv2.imshow('Binary threshold', thresholded)
+cv2.imshow('Binary Threshold', thresholded)
 
 threshold1 = 27
 threshold2 = 125
@@ -52,6 +52,13 @@ adaptive_thresh = cv2.adaptiveThreshold(
     101,
     10)
 cv2.imshow('Adaptive Thresholding', adaptive_thresh)
+
+cv2.imwrite('OriginalImage.png', img)
+cv2.imwrite('ThresholdedImage.png', dst)
+cv2.imwrite('BinaryThreshold.png', thresholded)
+cv2.imwrite('BandThresholding.png', t3)
+cv2.imwrite('SemiThresholding.png', semi_thresholded_image)
+cv2.imwrite('AdaptiveThresholding.png', adaptive_thresh)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()

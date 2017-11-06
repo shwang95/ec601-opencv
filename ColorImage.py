@@ -29,7 +29,7 @@ cv2.imshow('H', h)
 cv2.imshow('S', s)
 cv2.imshow('V', v)
 
-cv2.imwrite('Original image.png', img)
+cv2.imwrite('OriginalImage.png', img)
 cv2.imwrite('Red.png', r)
 cv2.imwrite('Green.png', g)
 cv2.imwrite('Blue.png', b)
