@@ -1,0 +1,34 @@
+# Exercise 1
+
+1. 
+OpenCV provide a macro CV_MAT_ELEM to read and write matrices, which stors the information of the coordinates of pixels (x, y). Alternatively, the matrix can have a third dimension that contains the color information, which can represented by (x, y)[index].
+
+# Exercise 2
+
+1. 
+Colorspaces are systems for representing the colors in computer. Red, green, and blue (RGB) can be combined to obtain any color in the visible spectrum. Hue, Saturation, Value (HSV) can also obtain the same color. The convert between different colorspace can be implemented.
+
+2. 
+r[20,25] =  225 g[20,25] =  122 b[20,25] =  106
+h[20,25] =  4 s[20,25] =  135 v[20,25] =  225
+y[20,25] =  151 cb[20,25] =  181 cr[20,25] =  103
+Range: 0 - 225
+
+# Exercise 3
+
+1. 
+For the Guaussian Noise the less the kernel the better the filter performance. For salt and pepper nois, the bigger the kernel the better the filter performance.
+
+2. 
+For Gaussian noise, gaussian filter is better. For salt and pepper noise, median filter seems better.
+
+# Exercise 4
+
+1. 
+Adaptive filtering keeps a lot of the same features of the original picture.
+
+2. 
+It losses a lot of original information and leaves only threshold value. 
+
+3. 
+Adaptive Thresholding calculates a threshold for small regions of the image therefore different regions have different thresholds and this gives better results when the illumination in the image is not constant.
